@@ -7,6 +7,7 @@ let tentativas = 1;
 
 
 
+
 while (chute!=numeroSecreto){
     chute = prompt('Escolha um número entre 1 e 30'); // 'prompt' é utilizado para imput
     if(chute == numeroSecreto) { //Sintaxe para o operador "if"      
@@ -23,10 +24,8 @@ while (chute!=numeroSecreto){
     }
 }
 
-if (tentativas > 1){
-    alert(`Acertou! o número secreto é : ${numeroSecreto} com ${tentativas} tentativas`); // Semelhante ao f-string do python f'Algumas coisa {variavel}'
-} else{
-    alert(`Acertou! o número secreto é : ${numeroSecreto} com ${tentativas} tentativa`); // Semelhante ao f-string do python f'Algumas coisa {variavel}'
-}
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+alert(`Acertou! o número secreto é : ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`); // Semelhante ao f-string do python f'Algumas coisa {variavel}'
+
 
 
